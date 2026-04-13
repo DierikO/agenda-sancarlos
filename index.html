@@ -3,7 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Agenda Municipal - San Carlos</title>
+
+    <meta property="og:title" content="Agenda Municipal - San Carlos">
+    <meta property="og:description" content="Consulta los eventos, turnos y servicios de la ciudad de San Carlos aquí.">
+    <meta property="og:image" content="https://dieriko.github.io/agenda-sancarlos/logomunicipal.png">
+    <meta property="og:url" content="https://dieriko.github.io/agenda-sancarlos/">
+
+    <link rel="icon" type="image/png" href="logomunicipal.png">
+
     <style>
         /* Configuración de colores institucionales */
         :root {
@@ -28,7 +37,8 @@
         }
 
         header img {
-            max-width: 120px; 
+            max-width: 150px; /* Ajusta según el tamaño de tu logo */
+            height: auto;
             margin-bottom: 10px;
         }
 
@@ -61,6 +71,8 @@
             margin-bottom: 15px;
             font-weight: bold;
             color: #555;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .grid-links { 
@@ -94,6 +106,10 @@
             box-shadow: 0 5px 15px rgba(0,90,171,0.2);
         }
 
+        .box span {
+            font-size: 1.5rem;
+        }
+
         footer { 
             text-align: center; 
             padding: 30px; 
@@ -113,13 +129,14 @@
         @media (max-width: 600px) {
             .iframe-container { height: 500px; }
             header h1 { font-size: 1.4rem; }
+            .grid-links { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="logomunicipal.png">
+    <img src="logomunicipal.png" alt="Municipalidad de San Carlos">
     <h1>Agenda Municipal de San Carlos</h1>
     <p>Comunicación directa con el vecino</p>
 </header>
@@ -133,15 +150,27 @@
         </div>
     </div>
 
-    <p class="services-title">ACCESOS RÁPIDOS</p>
+    <p class="services-title">Accesos Rápidos</p>
     
     <div class="grid-links">
-        <a href="https://wa.me/TUNUMERO" class="btn box"><span>💬</span> WhatsApp</a>
-        <a href="#" class="btn box"><span>💳</span> Pago Tasas</a>
-        <a href="#" class="btn box"><span>🚗</span> Licencias</a>
-        <a href="#" class="btn box"><span>🏥</span> Turnos Salud</a>
-        <a href="#" class="btn box"><span>📞</span> Teléfonos</a>
-        <a href="#" class="btn box"><span>📄</span> Trámites</a>
+        <a href="https://wa.me/5493871234567?text=Hola!%20Tengo%20una%20consulta" class="box" target="_blank">
+            <span>💬</span> WhatsApp
+        </a>
+        <a href="#" class="box">
+            <span>💳</span> Pago Tasas
+        </a>
+        <a href="#" class="box">
+            <span>🚗</span> Licencias
+        </a>
+        <a href="#" class="box">
+            <span>🏥</span> Turnos Salud
+        </a>
+        <a href="#" class="box">
+            <span>📞</span> Teléfonos
+        </a>
+        <a href="#" class="box">
+            <span>📄</span> Trámites
+        </a>
     </div>
 
 </div>
